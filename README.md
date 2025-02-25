@@ -6,6 +6,10 @@ Cool object size estimator with just OpenCV and python
 All thanks to Adrian Rosebrock (from [pyimagesearch](https://www.pyimagesearch.com/)) for making
 great tutorials. This project is inspired from his blog: [Measuring size of objects in an image with OpenCV](https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/). I have included the author's code and the one i wrote my self as well.
 
+### - Update (`lucasmarbatista`):
+
+It also includes a code that give the output in `mm` (milimeters) and outputs a `.csv` file with the number of objects founded and their size.
+
 ## **Key Points**
 1. Steps involved:
     1. Find contours in the image.
@@ -29,8 +33,14 @@ great tutorials. This project is inspired from his blog: [Measuring size of obje
  4. imutils         (0.5.2)
 
  ## **Commands to run the detection:**
+
+### - Inches version. No `.csv` output (`object_size.py`).
  ```
 python object_size.py --image images/example_01.png --width 0.955
+```
+### - Milimeters version. With  `.csv` output (`object_size_mm_csv`).
+```
+python object_size_mm_csv.py --image images/example_01.png --width 24.257 --output example_01
 ```
 
 ## **Results:**
@@ -38,6 +48,9 @@ The results are pretty decent even though not perfect. This is due the limitatio
 
 ![Gif 1 of object dimensions](example_01.gif)
 ![Gif 2 of object dimensions](example_02.gif)
+
+### - The `.csv` file
+It also outputs an `.csv` file with the number of objects founded and their size.
 
 
 ## **The limitations**
